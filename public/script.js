@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:4000/api/notes";
+const API_URL = "/api/notes";
 
 // Fetch and display all notes
 async function getNotes() {
