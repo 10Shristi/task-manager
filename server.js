@@ -117,12 +117,12 @@ app.use(express.json());
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB connected"))
   .catch(err => console.error("MongoDB error:", err));
-
+app.use("/api/notes", noteRoutes);
 // serve frontend
 app.use(express.static(path.join(__dirname, "public")));
 
 // api routes
-app.use("/api/notes", noteRoutes);
+
 
 // home page
 app.get("/", (req, res) => {
